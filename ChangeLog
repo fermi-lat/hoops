@@ -1,4 +1,19 @@
 ------------------------------------------------------------
+User: peachey  Wed Nov 26 11:04:35 PST 2003
+hoops/hoops
+
+Modified Files:
+	hoops.h hoops_exception.h hoops_group.h hoops_itor.h 
+	hoops_limits.h hoops_par.h hoops_pil.h hoops_pil_factory.h 
+	hoops_prim.h 
+Added Files:
+	hoops_numeric_limits.h 
+Log Message:
+Import from GSFC repository, tag GLAST20031126. This version includes
+many changes to support VS 7.0 on Windows, as well as merged changes
+made to the SLAC version.
+    *
+------------------------------------------------------------
 User: jchiang  Mon Nov 10 11:26:55 PST 2003
 hoops/doc
 
