@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: peachey  Wed Mar 31 11:45:44 PST 2004
+hoops/hoops
+
+Modified Files:
+	hoops_limits.h 
+Log Message:
+Silence compiler warnings on VC 7 by doing proper comparisons rather than
+implicit conversions to bools in expressions. This version is tagged GLAST20040331
+in the HEADAS repository.
+    *
+------------------------------------------------------------
 User: peachey  Tue Mar 30 13:19:30 PST 2004
 hoops/src/test
 
