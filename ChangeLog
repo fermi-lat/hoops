@@ -1,5 +1,18 @@
 ------------------------------------------------------------
 User: peachey  Wed Nov 26 11:04:35 PST 2003
+hoops/src
+
+Modified Files:
+	hoops_group.cxx hoops_par.cxx hoops_pil.cxx hoops_prim.cxx 
+Added Files:
+	hoops_limits.cxx 
+Log Message:
+Import from GSFC repository, tag GLAST20031126. This version includes
+many changes to support VS 7.0 on Windows, as well as merged changes
+made to the SLAC version.
+    *
+------------------------------------------------------------
+User: peachey  Wed Nov 26 11:04:35 PST 2003
 hoops/hoops
 
 Modified Files:
