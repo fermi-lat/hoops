@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Apr  4 09:22:05 PDT 2004
+hoops/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+remove unneeded cppflag
+    *
+------------------------------------------------------------
 User: burnett  Fri Apr  2 15:20:37 PST 2004
 hoops/cmt
 
