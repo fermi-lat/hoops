@@ -1,4 +1,18 @@
 ------------------------------------------------------------
+User: peachey  Tue Jan 20 10:09:59 PST 2004
+hoops/src
+
+Modified Files:
+	hoops_group.cxx hoops_limits.cxx hoops_par.cxx hoops_pil.cxx 
+	hoops_prim.cxx 
+Log Message:
+Import from GSFC repository, GSFC tag GLAST20040120.
+ * Bug fix: a parameter of type "fr" was being classified as a real
+ * (float/double) value. This led to unexpected exceptions eventually
+ * triggering abort in most programs.
+
+    *
+------------------------------------------------------------
 User: peachey  Tue Jan 20 10:09:54 PST 2004
 hoops/hoops
 
