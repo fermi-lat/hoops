@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: peachey  Wed Mar 24 09:04:49 PST 2004
+hoops/hoops
+
+Modified Files:
+	hoops_par.h 
+Log Message:
+Improve messages in thrown exceptions.
+
+    *
+------------------------------------------------------------
 User: peachey  Tue Mar 16 13:11:17 PST 2004
 hoops/src/test
 
