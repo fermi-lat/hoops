@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: peachey  Tue Sep 21 10:29:56 PDT 2004
+hoops/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Build using numeric_limits implementation.
+    *
+------------------------------------------------------------
 User: burnett  Sun Apr  4 09:22:05 PDT 2004
 hoops/cmt
 
