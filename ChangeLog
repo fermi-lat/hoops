@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Mon Mar  8 08:32:49 PST 2004
+hoops/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+suppress Windows warning message for clients, tag p4
+    *
+------------------------------------------------------------
+User: burnett  Mon Mar  8 08:32:49 PST 2004
 hoops/cmt
 
 Modified Files:
