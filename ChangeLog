@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Mar  8 08:32:49 PST 2004
+hoops/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+suppress Windows warning message for clients, tag p4
+    *
+------------------------------------------------------------
 User: peachey  Wed Feb 25 10:06:37 PST 2004
 hoops/src
 
