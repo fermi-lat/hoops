@@ -3,7 +3,7 @@ version v0
 
 author James Peachey <peachey@bigband.stanford.edu>
 
-# $Id: requirements,v 1.1.1.1 2003/11/04 01:48:29 jchiang Exp $
+# $Id: requirements,v 1.2 2003/11/04 03:40:12 jchiang Exp $
 
 branches hoops cmt src doc
 
@@ -32,6 +32,8 @@ macro test_hoopsstamps "hoops.stamp"
 macro my_headers "" WIN32 "../hoops/*.h *.h"
 library hoops -no_share $(my_headers) \
  *.cxx
+
+set PFILES "$(HOOPSROOT)/data"
 
 # test application
 application test_hoops test/main.cxx
