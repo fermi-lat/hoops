@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: peachey  Tue Dec  2 10:15:01 PST 2003
+hoops/hoops
+
+Modified Files:
+	hoops_limits.h 
+Log Message:
+Correct problems with the substitute implementation of numeric_limits,
+both in the library and test code.
+    *
+------------------------------------------------------------
 User: peachey  Tue Dec  2 10:14:43 PST 2003
 hoops/cmt
 
