@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: peachey  Wed Feb 25 10:06:37 PST 2004
+hoops/src
+
+Modified Files:
+	hoops_pil.cxx 
+Log Message:
+Remove the extension (.*) from the component name, so that parameter files
+can be named <application>.par instead of <application>.exe.par.
+
+    *
+------------------------------------------------------------
 User: peachey  Tue Jan 20 10:09:59 PST 2004
 hoops/src
 
