@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: peachey  Wed Mar 24 09:04:49 PST 2004
+hoops/src
+
+Modified Files:
+	hoops_group.cxx 
+Log Message:
+Improve messages in thrown exceptions.
+
+    *
+------------------------------------------------------------
+User: peachey  Wed Mar 24 09:04:49 PST 2004
 hoops/hoops
 
 Modified Files:
