@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: peachey  Tue Dec  2 10:15:01 PST 2003
+hoops/src
+
+Modified Files:
+	hoops_limits.cxx 
+Log Message:
+Correct problems with the substitute implementation of numeric_limits,
+both in the library and test code.
+    *
+------------------------------------------------------------
+User: peachey  Tue Dec  2 10:15:01 PST 2003
 hoops/hoops
 
 Modified Files:
