@@ -91,7 +91,6 @@ namespace hoops {
 #endif
 
 /******************************************************************************
- * $Log: hoops_exception.h,v $
  * Revision 1.4  2003/11/26 18:50:03  peachey
  * Merging changes made to SLAC repository into Goddard repository.
  *
