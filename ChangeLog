@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Mon Nov  3 19:40:12 PST 2003
+hoops/cmt
+
+Modified Files:
+	requirements 
+Removed Files:
+	rh72_gcc2953.make 
+Log Message:
+remove Root stuff
+    *
+------------------------------------------------------------
 User: jchiang  Mon Nov  3 17:48:31 PST 2003
 hoops
 
