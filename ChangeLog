@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Mon Nov 10 11:24:36 PST 2003
+hoops/src/test
+
+Modified Files:
+	main.cxx 
+Log Message:
+use James' test program as the unit test
+
+    *
+------------------------------------------------------------
 User: jchiang  Mon Nov 10 11:24:02 PST 2003
 hoops/hoops
 
