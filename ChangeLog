@@ -1,5 +1,19 @@
 ------------------------------------------------------------
 User: peachey  Tue Sep 21 10:32:14 PDT 2004
+hoops/src
+
+Modified Files:
+	hoops_group.cxx hoops_limits.cxx hoops_pil.cxx hoops_prim.cxx 
+	hoops_prompt_group.cxx 
+Log Message:
+In response to STGEN-5 issue, added the name of the component/tool
+in error messages. Also synchronized with some refactoring done on
+the HEADAS side to correct handling of numeric_limits.
+This version is tagged GLAST20040921 in the HEADAS repository.
+
+    *
+------------------------------------------------------------
+User: peachey  Tue Sep 21 10:32:14 PDT 2004
 hoops/hoops
 
 Modified Files:
