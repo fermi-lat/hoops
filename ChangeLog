@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: peachey  Tue Mar 30 13:19:30 PST 2004
+hoops/hoops
+
+Modified Files:
+	hoops_pil.h hoops_pil_factory.h hoops_prompt_group.h 
+Log Message:
+Allow PILParPrompt and ParPromptGroup constructors to accept optional
+component name which is then used in lieu of argv[0]. This version is
+tagged GLAST20040330 in the HEADAS repository.
+    *
+------------------------------------------------------------
 User: peachey  Fri Mar 26 18:03:39 PST 2004
 hoops/src/test
 
