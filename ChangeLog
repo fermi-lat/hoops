@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: peachey  Wed Mar 31 11:45:44 PST 2004
+hoops/src
+
+Modified Files:
+	hoops_pil.cxx hoops_prim.cxx 
+Log Message:
+Silence compiler warnings on VC 7 by doing proper comparisons rather than
+implicit conversions to bools in expressions. This version is tagged GLAST20040331
+in the HEADAS repository.
+    *
+------------------------------------------------------------
+User: peachey  Wed Mar 31 11:45:44 PST 2004
 hoops/hoops
 
 Modified Files:
