@@ -1,0 +1,50 @@
+------------------------------------------------------------
+User: jchiang  Mon Nov  3 17:48:31 PST 2003
+hoops
+
+Log Message:
+First import
+
+Status:
+
+Vendor Tag:	GLAST
+Release Tags:	v0
+		
+I hoops/rh72_gcc2953
+N hoops/.cvsignore
+N hoops/cmt/requirements
+N hoops/cmt/Makefile
+I hoops/cmt/requirements~
+N hoops/cmt/setup.csh
+N hoops/cmt/setup.sh
+N hoops/cmt/cleanup.csh
+N hoops/cmt/cleanup.sh
+N hoops/cmt/rh72_gcc2953.make
+N hoops/src/hoops_group.cxx
+N hoops/src/hoops_par.cxx
+N hoops/src/hoops_pil.cxx
+N hoops/src/hoops_prim.cxx
+N hoops/src/test/hoops_lim_test.cxx
+N hoops/src/test/hoops_par_test.cxx
+N hoops/src/test/hoops_prim_test.cxx
+I hoops/src/test/hoops_prim_test.cxx~
+I hoops/src/test/hoops_par_test.cxx~
+I hoops/src/test/hoops_lim_test.cxx~
+I hoops/src/test/main.cxx~
+N hoops/src/test/main.cxx
+N hoops/hoops/hoops.h
+N hoops/hoops/hoops_exception.h
+N hoops/hoops/hoops_group.h
+N hoops/hoops/hoops_itor.h
+N hoops/hoops/hoops_limits.h
+N hoops/hoops/hoops_par.h
+N hoops/hoops/hoops_pil.h
+N hoops/hoops/hoops_pil_factory.h
+N hoops/hoops/hoops_prim.h
+N hoops/doc/Doxyfile.run
+N hoops/doc/Doxyfile
+N hoops/doc/release.notes
+
+No conflicts created by this import
+
+    *
