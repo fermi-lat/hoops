@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: peachey  Fri Sep 24 11:07:33 PDT 2004
+hoops/src
+
+Modified Files:
+	hoops_prim.cxx 
+Log Message:
+Correct rules for determining underflows. This version is tagged GLAST20040924
+in the HEASARC repository.
+    *
+------------------------------------------------------------
+User: peachey  Fri Sep 24 11:07:33 PDT 2004
 hoops/doc
 
 Modified Files:
