@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Nov  3 20:38:47 PST 2003
+hoops/src/test
+
+Modified Files:
+	main.cxx 
+Log Message:
+working version of simple test program
+    *
+------------------------------------------------------------
+User: jchiang  Mon Nov  3 20:38:47 PST 2003
 hoops/cmt
 
 Modified Files:
