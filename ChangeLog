@@ -1,5 +1,31 @@
 ------------------------------------------------------------
 User: peachey  Tue Mar 16 13:11:17 PST 2004
+hoops/hoops
+
+Modified Files:
+	hoops.h hoops_exception.h hoops_itor.h hoops_par.h hoops_pil.h 
+	hoops_pil_factory.h hoops_prim.h 
+Added Files:
+	hoops_prompt_group.h 
+Log Message:
+Synching with HEADAS repository, tagged GLAST20040316.
+- Removed non-empty throw specs.
+- Added what() method to Hexception, and had it include file name and
+  line number in its output.
+- Added PILException, thrown by PIL stuff. Derived from Hexception,
+  it puts in PIL's error messages.
+- Explicitly call constructors of base classes to silence compiler warnings.
+- Stop throwing exceptions for conversions to a potentially smaller type.
+- Changed all thrown exceptions so that they add in their file name and
+  line number.
+- Corrected some problems with the PIL implementation.
+- Added ParPromptGroup class to cover simple ballistic tool
+  use case.
+- Added hoops_sample.cxx, sample code which demos ParPromptGroup.
+
+    *
+------------------------------------------------------------
+User: peachey  Tue Mar 16 13:11:17 PST 2004
 hoops/data
 
 Added Files:
