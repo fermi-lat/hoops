@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: cohen  Wed Nov 26 16:27:56 PST 2003
+hoops/cmt
+
+Added Files:
+	.cvsignore 
+Removed Files:
+	setup.sh setup.csh cleanup.sh cleanup.csh 
+Log Message:
+preparing tag for definiteness
+    *
+------------------------------------------------------------
 User: peachey  Wed Nov 26 11:23:57 PST 2003
 hoops/cmt
 
