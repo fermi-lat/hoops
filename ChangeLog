@@ -1,4 +1,19 @@
 ------------------------------------------------------------
+User: peachey  Fri Mar 26 18:03:39 PST 2004
+hoops/hoops
+
+Modified Files:
+	hoops.h 
+Log Message:
+Improve messages in thrown exceptions. Avoid calling Save() in
+~ParPromptGroup(), because Save() can throw, leading to undefined
+behavior. For now, changed Add(...) and Remove(...) methods in
+ParPromptGroup to throw automatically if they're called, because
+PIL can't add parameters on the fly. This version is tagged
+GLAST20040326 in the HEADAS repository.
+
+    *
+------------------------------------------------------------
 User: peachey  Wed Mar 24 09:04:49 PST 2004
 hoops/src
 
