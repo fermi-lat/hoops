@@ -3,12 +3,12 @@ version v0r4p3
 
 author James Peachey <peachey@lheamail.gsfc.nasa.gov>
 
-# $Id: requirements,v 1.13 2004/09/21 17:29:56 peachey Exp $
+# $Id: requirements,v 1.14 2004/09/24 18:07:33 peachey Exp $
 
 branches hoops cmt src doc
 
 use STpolicy *
-use pil * IExternal
+use ape * IExternal
 
 apply_pattern ST_library option=-no_share
  
