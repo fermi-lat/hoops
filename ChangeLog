@@ -1,5 +1,18 @@
 ------------------------------------------------------------
 User: peachey  Tue Nov  6 08:56:24 PST 2007
+hoops/hoops
+
+Added Files:
+	hoops_ape.h hoops_ape_factory.h 
+Removed Files:
+	hoops_pil.h 
+Log Message:
+Use Ape instead of PIL. Initial import of HEADAS version of hoops
+that does this.
+
+    *
+------------------------------------------------------------
+User: peachey  Tue Nov  6 08:56:24 PST 2007
 hoops/cmt
 
 Modified Files:
