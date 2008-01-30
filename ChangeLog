@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: peachey  Wed Jan 30 07:56:08 PST 2008
+hoops/hoops
+
+Removed Files:
+	hoops_pil_factory.h 
+Log Message:
+Remove PIL-based factory.
+
+    *
+------------------------------------------------------------
 User: peachey  Wed Jan 30 07:55:48 PST 2008
 hoops/src/test
 
