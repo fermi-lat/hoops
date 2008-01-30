@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: peachey  Wed Jan 30 07:55:48 PST 2008
+hoops/src/test
+
+Modified Files:
+	main.cxx 
+Log Message:
+Use ApeParFileFactory instead of PILParFileFactory.
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v1, operation: add
 Package: hoops
