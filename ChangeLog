@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Mon Feb  4 09:15:42 PST 2008
+hoops
+
+Modified Files:
+	hoopsLib.py 
+Log Message:
+Use APE in SCons instead of pil
+    *
+------------------------------------------------------------
 TAG
 Tag name: hoops-01-00-01, operation: add
 Package: hoops
