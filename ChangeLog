@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Thu Feb 21 16:55:05 PST 2008
+hoops
+
+Modified Files:
+	SConscript 
+Log Message:
+add test_hoops as an application to be built
+    *
+------------------------------------------------------------
 TAG
 Tag name: hoops-01-00-02, operation: add
 Package: hoops
