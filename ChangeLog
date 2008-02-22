@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 TAG
+Tag name: hoops-01-00-02, operation: mov
+Package: hoops
+User: glast  Thu Feb 21 17:06:36 2008
+Files:
+  hoops/SConscript  1.2
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: v1r0p2, operation: mov
 Package: hoops
 User: glast  Thu Feb 21 17:06:16 2008
