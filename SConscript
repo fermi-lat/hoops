@@ -1,10 +1,10 @@
-#$Id$
-
+#$Id: SConscript,v 1.2 2008/02/22 00:55:05 golpa Exp $
 Import('baseEnv')
 Import('listFiles')
 progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
+libEnv.Tool('hoopsLib', depsOnly = 1)
 hoopsLib = libEnv.StaticLibrary('hoops', listFiles(['src/*.cxx']))
 
 progEnv.Tool('hoopsLib')
