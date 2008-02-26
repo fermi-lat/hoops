@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: glastrm  Mon Feb 25 19:31:51 PST 2008
+ScienceTools-scons/hoops
+
+Modified Files:
+	hoopsLib.py SConscript 
+Log Message:
+Set lib dependencies up for when building libraries
+    *
+------------------------------------------------------------
 TAG
 Tag name: hoops-01-00-02, operation: mov
 Package: hoops
