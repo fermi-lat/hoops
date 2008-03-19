@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: glastrm  Wed Mar 19 14:03:58 PDT 2008
+ScienceTools-scons/hoops
+
+Modified Files:
+	SConscript 
+Log Message:
+Register data files
+    *
+------------------------------------------------------------
 TAG
 Tag name: hoops-01-00-02, operation: mov
 Package: hoops
