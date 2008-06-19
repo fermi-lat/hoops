@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+TAG
+Tag name: hoops-01-00-02, operation: mov
+Package: hoops
+User: glastrm  Thu Jun 19 15:40:30 2008
+Files:
+  hoops/SConscript  1.5
+
+    *
+------------------------------------------------------------
 User: glastrm  Thu Jun 19 15:40:20 PDT 2008
 ScienceTools-scons/hoops
 
