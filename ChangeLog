@@ -1,5 +1,17 @@
 ------------------------------------------------------------
 User: peachey  Tue Sep  2 13:31:54 PDT 2008
+hoops/src/test
+
+Modified Files:
+	hoops_par_test.cxx 
+Log Message:
+Changes to support input of strings INDEF, UNDEF, UNDEFINED, NONE
+for numeric parameters, indicating value is undefined. For floating
+point parameters, also accept INF, INFINITY or NAN to indicate an
+infinite value.
+    *
+------------------------------------------------------------
+User: peachey  Tue Sep  2 13:31:54 PDT 2008
 hoops/src
 
 Modified Files:
