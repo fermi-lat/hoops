@@ -1,5 +1,13 @@
 ------------------------------------------------------------
 TAG
+Tag name: ScienceTools-09-07-00, operation: del
+Package: hoops
+User: glastrm  Wed Sep 17 13:11:55 2008
+Files:
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: hoops-01-01-00, operation: add
 Package: hoops
 User: glastrm  Tue Sep  2 14:52:09 2008
