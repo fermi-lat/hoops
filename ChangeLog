@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jrb  Thu Jul  9 18:13:40 PDT 2009
+ScienceTools-scons/hoops
+
+Modified Files:
+	SConscript 
+Log Message:
+Use registerTargets rather than registerObjects
+
+    *
+------------------------------------------------------------
 User: heather  Wed Jul  1 09:55:01 PDT 2009
 hoops/doc
 
