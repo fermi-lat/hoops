@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+TAG
+Tag name: v1r1p2, operation: mov
+Package: hoops
+User: glastrm  Wed Jul 15 11:32:00 2009
+Files:
+  hoops/SConscript  1.9
+
+    *
+------------------------------------------------------------
 User: glastrm  Wed Jul 15 11:31:54 PDT 2009
 hoops
 
