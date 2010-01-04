@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: peachey  Mon Jan  4 10:54:35 PST 2010
+hoops/hoops
+
+Modified Files:
+	hoops.h hoops_ape.h hoops_ape_factory.h hoops_exception.h 
+	hoops_group.h 
+Log Message:
+Import hoops version v1r1p3 from HEASARC. Fixes INDEF handling
+as well as includes some missing header files.
+    *
+------------------------------------------------------------
 User: peachey  Wed Dec 23 13:20:56 PST 2009
 hoops/doc
 
