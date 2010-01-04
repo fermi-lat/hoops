@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: peachey  Mon Jan  4 10:54:35 PST 2010
+hoops/src/test
+
+Modified Files:
+	hoops_par_test.cxx 
+Log Message:
+Import hoops version v1r1p3 from HEASARC. Fixes INDEF handling
+as well as includes some missing header files.
+    *
+------------------------------------------------------------
+User: peachey  Mon Jan  4 10:54:35 PST 2010
 hoops/src
 
 Modified Files:
