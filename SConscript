@@ -1,5 +1,5 @@
 # -*- python -*-
-# $Id: SConscript,v 1.10 2010/01/04 18:56:56 peachey Exp $
+# $Id: SConscript,v 1.11 2010/01/15 22:21:21 peachey Exp $
 # Authors: James Peachey <peachey@lheamail.gsfc.nasa.gov>
 # Version: hoops-01-01-04
 Import('baseEnv')
@@ -7,7 +7,6 @@ Import('listFiles')
 progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
-libEnv.Tool('hoopsLib', depsOnly = 1)
 hoopsLib = libEnv.StaticLibrary('hoops', listFiles(['src/*.cxx']))
 
 progEnv.Tool('hoopsLib')
