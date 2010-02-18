@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jrb  Wed Feb 17 16:56:48 PST 2010
+ScienceTools-scons/hoops
+
+Modified Files:
+	.cvsignore SConscript 
+Log Message:
+Fix library link
+    *
+------------------------------------------------------------
 TAG
 Tag name: hoops-01-01-04, operation: add
 Package: hoops
