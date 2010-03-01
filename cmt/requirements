@@ -1,9 +1,9 @@
 package hoops
-version v1r1p5
+version v1r1p6
 
 author James Peachey <peachey@lheamail.gsfc.nasa.gov>
 
-# $Id: requirements,v 1.18 2010/01/15 22:21:21 peachey Exp $
+# $Id: requirements,v 1.19 2010/02/22 20:49:10 jrb Exp $
 
 branches hoops cmt src doc
 
