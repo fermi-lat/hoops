@@ -1,4 +1,18 @@
 ------------------------------------------------------------
+User: tstephen  Tue Apr 27 08:25:16 PDT 2010
+ScienceTools-scons/hoops/hoops
+
+Modified Files:
+	hoops.h hoops_ape.h hoops_ape_factory.h hoops_exception.h 
+	hoops_group.h hoops_itor.h hoops_par.h hoops_prim.h 
+	hoops_prompt_group.h 
+Log Message:
+Removed the workaround Joanne had added to allow hoops to build properly
+as a static library on windows.
+
+
+    *
+------------------------------------------------------------
 User: tstephen  Tue Apr 27 08:24:18 PDT 2010
 ScienceTools-scons/hoops
 
