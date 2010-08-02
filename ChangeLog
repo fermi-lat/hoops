@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: tstephen  Mon Aug  2 13:03:21 PDT 2010
+ScienceTools-scons/hoops/hoops
+
+Modified Files:
+	hoops_par.h hoops_itor.h hoops_exception.h 
+	hoops_prompt_group.h hoops_group.h hoops.h hoops_prim.h 
+	hoops_ape.h hoops_ape_factory.h 
+Log Message:
+Reapplied changes to header files to remove the declspec directives.
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-17-00, operation: add
 Package: hoops
