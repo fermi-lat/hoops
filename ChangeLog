@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: tstephen  Mon Aug  2 13:09:06 PDT 2010
+hoops
+
+Modified Files:
+	SConscript 
+Log Message:
+Fixed SConscript file to build as static library.
+
+    *
+------------------------------------------------------------
 User: tstephen  Mon Aug  2 13:03:21 PDT 2010
 ScienceTools-scons/hoops/hoops
 
