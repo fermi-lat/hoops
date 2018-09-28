@@ -1,0 +1,8 @@
+get_filename_component(hoops_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+include(CMakeFindDependencyMacro)
+
+if(NOT TARGET ST::hoops)
+    include("${hoops_CMAKE_DIR}/hoopsTargets.cmake")
+endif()
+
+set(hoops_LIBRARIES ST::hoops)
