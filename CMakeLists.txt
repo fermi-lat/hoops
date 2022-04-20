@@ -22,3 +22,18 @@ add_executable(test_hoops src/test/hoops_lim_test.cxx)
 
 target_link_libraries(test_source PRIVATE hoops)
 target_link_libraries(test_hoops PRIVATE hoops)
+
+###############################################################
+# Installation
+###############################################################
+install(DIRECTORY hoops DESTINATION ${FERMI_INSTALL_INCLUDEDIR})
+install(DIRECTORY data/ DESTINATION ${FERMI_INSTALL_DATADIR})
+
+install(
+  TARGETS hoops
+  # EXPORT fermiTargets
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib
+  INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+)
