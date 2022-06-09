@@ -1,5 +1,5 @@
 add_library(
-  hoops STATIC
+  hoops 
   src/hoops_ape.cxx
   src/hoops_exception.cxx
   src/hoops_group.cxx
