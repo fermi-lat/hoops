@@ -17,6 +17,8 @@ target_include_directories(
 
 target_link_libraries(hoops PRIVATE ape)
 
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
 add_executable(test_hoops src/test/hoops_lim_test.cxx)
 target_link_libraries(test_hoops PRIVATE hoops)
 
