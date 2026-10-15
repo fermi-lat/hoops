@@ -43,7 +43,7 @@ namespace hoops {
   //////////////////////////////////////////////////////////////////////////////
   // Static function declarations.
   //////////////////////////////////////////////////////////////////////////////
-  static char *CpyStr(const char *s);
+  static auto CpyStr(const char *s) -> char *;
   //////////////////////////////////////////////////////////////////////////////
 
   //////////////////////////////////////////////////////////////////////////////
@@ -61,9 +61,9 @@ namespace hoops {
       format(os.str());
     }
 
-  int ApeException::ApeCode() const { return mApeCode; }
+  auto ApeException::ApeCode() const -> int { return mApeCode; }
 
-  int ApeException::ape2Hoops(int status) {
+  auto ApeException::ape2Hoops(int status) -> int {
     // Convert ape error codes into hoops error codes in the cases where
     // there is a correspondence.
     // Note these are placed in order of the Hoops exceptions rather than
@@ -173,7 +173,7 @@ namespace hoops {
 
   HoopsApeFile::~HoopsApeFile() { SetArgs(0, 0); delete mGroup; }
 
-  HoopsApeFile & HoopsApeFile::operator =(const HoopsApeFile & pf) {
+  auto HoopsApeFile::operator =(const HoopsApeFile & pf) -> HoopsApeFile & {
     mComponent = pf.mComponent;
     if (mGroup) {
       if (pf.mGroup) *mGroup = *pf.mGroup;
@@ -185,7 +185,7 @@ namespace hoops {
     return *this;
   }
 
-  HoopsApeFile & HoopsApeFile::operator =(const IParFile & pf) {
+  auto HoopsApeFile::operator =(const IParFile & pf) -> HoopsApeFile & {
     mComponent = pf.Component();
     if (mGroup) {
       *mGroup = pf.Group();
@@ -347,25 +347,25 @@ namespace hoops {
     CloseParFile();
   }
 
-  IParGroup & HoopsApeFile::Group() {
+  auto HoopsApeFile::Group() -> IParGroup & {
     if (!mGroup) mGroup = new ParGroup(mComponent);
     return *mGroup;
   }
 
-  const IParGroup & HoopsApeFile::Group() const {
+  auto HoopsApeFile::Group() const -> const IParGroup & {
     if (!mGroup) mGroup = new ParGroup(mComponent);
     return *mGroup;
   }
 
-  HoopsApeFile & HoopsApeFile::SetComponent(const std::string & comp) {
+  auto HoopsApeFile::SetComponent(const std::string & comp) -> HoopsApeFile & {
     CleanComponent(comp, mComponent);
     return *this;
   }
 
-  IParGroup * HoopsApeFile::SetGroup(IParGroup * group)
+  auto HoopsApeFile::SetGroup(IParGroup * group) -> IParGroup *
     { IParGroup * retval = mGroup; mGroup = group; return retval; }
 
-  GenParItor HoopsApeFile::begin() {
+  auto HoopsApeFile::begin() -> GenParItor {
     if (!mGroup) {
       std::ostringstream s;
       s << "Attempt to find the beginning of a NULL group of parameters for " <<
@@ -375,7 +375,7 @@ namespace hoops {
     return mGroup->begin();
   }
 
-  ConstGenParItor HoopsApeFile::begin() const {
+  auto HoopsApeFile::begin() const -> ConstGenParItor {
     if (!mGroup) {
       std::ostringstream s;
       s << "Attempt to find the beginning of a NULL group of parameters for " <<
@@ -385,7 +385,7 @@ namespace hoops {
     return static_cast<const IParGroup *>(mGroup)->begin();
   }
 
-  GenParItor HoopsApeFile::end() {
+  auto HoopsApeFile::end() -> GenParItor {
     if (!mGroup) {
       std::ostringstream s;
       s << "Attempt to find the end of a NULL group of parameters for " <<
@@ -395,7 +395,7 @@ namespace hoops {
     return mGroup->end();
   }
 
-  ConstGenParItor HoopsApeFile::end() const {
+  auto HoopsApeFile::end() const -> ConstGenParItor {
     if (!mGroup) {
       std::ostringstream s;
       s << "Attempt to find the end of a NULL group of parameters for " <<
@@ -405,7 +405,7 @@ namespace hoops {
     return static_cast<const IParGroup *>(mGroup)->end();
   }
 
-  IParFile * HoopsApeFile::Clone() const { return new HoopsApeFile(*this); }
+  auto HoopsApeFile::Clone() const -> IParFile * { return new HoopsApeFile(*this); }
 
   void HoopsApeFile::CleanComponent(const std::string & comp, std::string & clean)
     const {
@@ -490,18 +490,18 @@ namespace hoops {
 
   HoopsApePrompt::~HoopsApePrompt() { delete mFile; }
 
-  HoopsApePrompt & HoopsApePrompt::operator =(const HoopsApePrompt & p) {
+  auto HoopsApePrompt::operator =(const HoopsApePrompt & p) -> HoopsApePrompt & {
     *mFile = *p.mFile;
     return *this;
   }
 
-  HoopsApePrompt & HoopsApePrompt::operator =(const IParPrompt & p) {
+  auto HoopsApePrompt::operator =(const IParPrompt & p) -> HoopsApePrompt & {
     delete mFile;
     mFile = new HoopsApeFile("", p.Argc(), p.Argv());
     return *this;
   }
 
-  HoopsApePrompt & HoopsApePrompt::Prompt() {
+  auto HoopsApePrompt::Prompt() -> HoopsApePrompt & {
     const IParGroup & g = mFile->Group();
 
     // Make a list of all the parameters which may need prompting.
@@ -516,7 +516,7 @@ namespace hoops {
     return Prompt(plist);
   }
 
-  HoopsApePrompt & HoopsApePrompt::Prompt(const std::string & pname) {
+  auto HoopsApePrompt::Prompt(const std::string & pname) -> HoopsApePrompt & {
     // Make a list of one parameter name: pname.
     std::vector<std::string> plist;
     plist.push_back(pname);
@@ -525,7 +525,7 @@ namespace hoops {
     return Prompt(plist);
   }
 
-  HoopsApePrompt & HoopsApePrompt::Prompt(const std::vector<std::string> & pnames) {
+  auto HoopsApePrompt::Prompt(const std::vector<std::string> & pnames) -> HoopsApePrompt & {
     int status = eOK;
 
     try {
@@ -628,18 +628,18 @@ namespace hoops {
     return *this;
   }
 
-  IParGroup & HoopsApePrompt::Group() {
+  auto HoopsApePrompt::Group() -> IParGroup & {
     return mFile->Group();
   }
 
-  const IParGroup & HoopsApePrompt::Group() const {
+  auto HoopsApePrompt::Group() const -> const IParGroup & {
     return mFile->Group();
   }
 
-  IParGroup * HoopsApePrompt::SetGroup(IParGroup * group)
+  auto HoopsApePrompt::SetGroup(IParGroup * group) -> IParGroup *
     { IParGroup * retval = &mFile->Group(); mFile->SetGroup(group); return retval; }
 
-  IParPrompt * HoopsApePrompt::Clone() const { return new HoopsApePrompt(*this); }
+  auto HoopsApePrompt::Clone() const -> IParPrompt * { return new HoopsApePrompt(*this); }
   //////////////////////////////////////////////////////////////////////////////
   // End HoopsApePrompt implementation.
   //////////////////////////////////////////////////////////////////////////////
@@ -647,10 +647,10 @@ namespace hoops {
   //////////////////////////////////////////////////////////////////////////////
   // Begin HoopsApeFileFactory implementation.
   //////////////////////////////////////////////////////////////////////////////
-  IParFile * HoopsApeFileFactory::NewIParFile(const IParFile & p)
+  auto HoopsApeFileFactory::NewIParFile(const IParFile & p) -> IParFile *
     { return new HoopsApeFile(p); }
 
-  IParFile * HoopsApeFileFactory::NewIParFile(const std::string & comp_name)
+  auto HoopsApeFileFactory::NewIParFile(const std::string & comp_name) -> IParFile *
     { return new HoopsApeFile(comp_name); }
   //////////////////////////////////////////////////////////////////////////////
   // End HoopsApeFileFactory implementation.
@@ -659,10 +659,10 @@ namespace hoops {
   //////////////////////////////////////////////////////////////////////////////
   // Begin HoopsApePromptFactory implementation.
   //////////////////////////////////////////////////////////////////////////////
-  IParPrompt * HoopsApePromptFactory::NewIParPrompt(const IParPrompt & p)
+  auto HoopsApePromptFactory::NewIParPrompt(const IParPrompt & p) -> IParPrompt *
     { return new HoopsApePrompt(p); }
 
-  IParPrompt * HoopsApePromptFactory::NewIParPrompt(int argc, char ** argv, const std::string & comp_name)
+  auto HoopsApePromptFactory::NewIParPrompt(int argc, char ** argv, const std::string & comp_name) -> IParPrompt *
     { return new HoopsApePrompt(argc, argv, comp_name); }
   //////////////////////////////////////////////////////////////////////////////
   // End HoopsApePromptFactory implementation.
@@ -683,7 +683,7 @@ namespace hoops {
   //////////////////////////////////////////////////////////////////////////////
   // Utility CpyStr: copy a string, allocating a new string
   // just large enough to hold the string being copied.
-  static char *CpyStr(const char *s) {
+  static auto CpyStr(const char *s) -> char * {
     char *r = 0;
     if (s) {
       char *ptr;

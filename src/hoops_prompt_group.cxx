@@ -67,74 +67,74 @@ namespace hoops {
     delete mFile;
   }
 
-  IParGroup & ParPromptGroup::operator =(const ParPromptGroup & g) {
+  auto ParPromptGroup::operator =(const ParPromptGroup & g) -> IParGroup & {
     *mGroup = *g.mGroup;
     return *this;
   }
 
-  IParGroup & ParPromptGroup::operator =(const IParGroup & g) {
+  auto ParPromptGroup::operator =(const IParGroup & g) -> IParGroup & {
     *mGroup = g;
     return *this;
   }
 
-  IPar & ParPromptGroup::operator [](const std::string & pname) const {
+  auto ParPromptGroup::operator [](const std::string & pname) const -> IPar & {
     return mGroup->operator [](pname);
   }
 
-  IPar & ParPromptGroup::Find(const std::string & pname) const {
+  auto ParPromptGroup::Find(const std::string & pname) const -> IPar & {
     return mGroup->Find(pname);
   }
 
-  IParGroup & ParPromptGroup::Clear() {
+  auto ParPromptGroup::Clear() -> IParGroup & {
     mGroup->Clear();
     return *this;
   }
 
-  IParGroup & ParPromptGroup::Add(IPar * p) {
+  auto ParPromptGroup::Add(IPar * p) -> IParGroup & {
     throw Hexception(PAR_UNSUPPORTED,
       "Editing Ape-based prompt group not supported", __FILE__, __LINE__);
     mGroup->Add(p);
     return *this;
   }
 
-  IParGroup & ParPromptGroup::Remove(IPar * p) {
+  auto ParPromptGroup::Remove(IPar * p) -> IParGroup & {
     throw Hexception(PAR_UNSUPPORTED,
       "Editing Ape-based prompt group not supported", __FILE__, __LINE__);
     mGroup->Remove(p);
     return *this;
   }
 
-  IParGroup & ParPromptGroup::Remove(const std::string & pname) {
+  auto ParPromptGroup::Remove(const std::string & pname) -> IParGroup & {
     throw Hexception(PAR_UNSUPPORTED,
       "Editing Ape-based prompt group not supported", __FILE__, __LINE__);
     mGroup->Remove(pname);
     return *this;
   }
 
-  GenParItor ParPromptGroup::begin() {
+  auto ParPromptGroup::begin() -> GenParItor {
     return mGroup->begin();
   }
 
-  ConstGenParItor ParPromptGroup::begin() const {
+  auto ParPromptGroup::begin() const -> ConstGenParItor {
     return (const_cast<const IParGroup *>(mGroup))->begin();
   }
 
-  GenParItor ParPromptGroup::end() {
+  auto ParPromptGroup::end() -> GenParItor {
     return mGroup->end();
   }
 
-  ConstGenParItor ParPromptGroup::end() const {
+  auto ParPromptGroup::end() const -> ConstGenParItor {
     return (const_cast<const IParGroup *>(mGroup))->end();
   }
 
-  IParGroup * ParPromptGroup::Clone() const { return new ParPromptGroup(*this); }
+  auto ParPromptGroup::Clone() const -> IParGroup * { return new ParPromptGroup(*this); }
 
-  ParPromptGroup & ParPromptGroup::Prompt() {
+  auto ParPromptGroup::Prompt() -> ParPromptGroup & {
     mPrompter->Prompt();
     return *this;
   }
 
-  ParPromptGroup & ParPromptGroup::Prompt(const std::string & pname) {
+  auto ParPromptGroup::Prompt(const std::string & pname) -> ParPromptGroup & {
     mPrompter->Prompt(pname);
     return *this;
   }

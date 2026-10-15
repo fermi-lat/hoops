@@ -38,7 +38,7 @@ namespace hoops {
 
   ParGroup::~ParGroup() { Clear(); }
 
-  ParGroup & ParGroup::operator =(const IParGroup & g) {
+  auto ParGroup::operator =(const IParGroup & g) -> ParGroup & {
     ConstGenParItor it;
     Clear();
     for (it = g.begin(); it != g.end(); ++it) 
@@ -46,7 +46,7 @@ namespace hoops {
     return *this;
   }
 
-  ParGroup & ParGroup::operator =(const ParGroup & g) {
+  auto ParGroup::operator =(const ParGroup & g) -> ParGroup & {
     std::vector<IPar *>::const_iterator it;
     Clear();
     for (it = g.mPars.begin(); it != g.mPars.end(); ++it) 
@@ -54,7 +54,7 @@ namespace hoops {
     return *this;
   }
 
-  IPar & ParGroup::Find(const std::string & pname) const {
+  auto ParGroup::Find(const std::string & pname) const -> IPar & {
     std::vector<IPar *>::const_iterator it;
 
     // Look for a parameter with the given name.
@@ -70,19 +70,19 @@ namespace hoops {
     return *(*it);
   }
 
-  ParGroup & ParGroup::Clear() {
+  auto ParGroup::Clear() -> ParGroup & {
     std::vector<IPar *>::iterator it;
     for (it = mPars.begin(); it != mPars.end(); ++it) delete *it;
     mPars.clear();
     return *this;
   }
 
-  ParGroup & ParGroup::Add(IPar * p)
+  auto ParGroup::Add(IPar * p) -> ParGroup &
     { if (p) mPars.push_back(p); return *this; }
   
-  ParGroup & ParGroup::Remove(IPar * p) { Remove(p->Name()); return *this; }
+  auto ParGroup::Remove(IPar * p) -> ParGroup & { Remove(p->Name()); return *this; }
 
-  ParGroup & ParGroup::Remove(const std::string & pname) {
+  auto ParGroup::Remove(const std::string & pname) -> ParGroup & {
     std::vector<IPar *>::iterator it;
     for (it = mPars.begin(); it != mPars.end(); ++it) {
       if (!pname.compare((*it)->Name())) {

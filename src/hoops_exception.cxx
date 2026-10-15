@@ -28,7 +28,7 @@ namespace hoops {
     const std::string & filename, int line): mMsg(), mFileName(filename),
     mCode(code), mLine(line) { format(msg); }
 
-  const char * Hexception::what() const throw() { return mMsg.c_str(); }
+  auto Hexception::what() const throw() -> const char * { return mMsg.c_str(); }
 
   Hexception::Hexception(const int & code, const std::string & filename,
     int line): mMsg(), mFileName(filename), mCode(code), mLine(line) {}

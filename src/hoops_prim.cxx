@@ -40,9 +40,9 @@ namespace hoops {
   static int strcasecmp(const char *s1, const char *s2);
 #endif
 
-  static const char * float_format();
-  static const char * double_format();
-  static const char * long_double_format();
+  static auto float_format() -> const char *;
+  static auto double_format() -> const char *;
+  static auto long_double_format() -> const char *;
 
   //////////////////////////////////////////////////////////////////////////////
 
@@ -51,7 +51,7 @@ namespace hoops {
   //////////////////////////////////////////////////////////////////////////////
   class Conv {
     public:
-      static std::string TrimSpaceUpperCase(const std::string & s) {
+      static auto TrimSpaceUpperCase(const std::string & s) -> std::string {
         std::string::const_iterator begin = s.begin();
         std::string::const_iterator end = s.end();
         // Trim leading space.
@@ -65,11 +65,11 @@ namespace hoops {
           itor != new_s.end(); ++itor) *itor = std::toupper(*itor);
         return new_s;
       }
-      static bool IsInfinite(const std::string & s) {
+      static auto IsInfinite(const std::string & s) -> bool {
         if ("INF" == s || "INFINITY" == s || "NAN" == s) return true;
         return false;
       }
-      static bool IsUndefined(const std::string & s) {
+      static auto IsUndefined(const std::string & s) -> bool {
         if ("INDEF" == s || "NONE" == s || "UNDEF" == s || "UNDEFINED" == s)
           return true;
         return false;
@@ -1220,43 +1220,43 @@ namespace hoops {
       virtual void To(long double & x) const { Conv::Convert(mData, x); }
       virtual void To(std::string & x) const { Conv::Convert(mData, x); }
 
-      virtual std::string StringData() const throw()
+      virtual auto StringData() const throw() -> std::string
         { std::string r; To(r); return r; }
 
-      virtual IPrim * Clone() const { return new Prim<T>(mData); }
+      virtual auto Clone() const -> IPrim * { return new Prim<T>(mData); }
 
     protected:
       T mData;
   };
 
   //////////////////////////////////////////////////////////////////////////////
-  IPrim * PrimFactory::NewIPrim(const bool & p) const
+  auto PrimFactory::NewIPrim(const bool & p) const -> IPrim *
     { return new Prim<bool>(p); }
-  IPrim * PrimFactory::NewIPrim(const char & p) const
+  auto PrimFactory::NewIPrim(const char & p) const -> IPrim *
     { return new Prim<char>(p); }
-  IPrim * PrimFactory::NewIPrim(const signed char & p) const
+  auto PrimFactory::NewIPrim(const signed char & p) const -> IPrim *
     { return new Prim<signed char>(p); }
-  IPrim * PrimFactory::NewIPrim(const signed short & p) const
+  auto PrimFactory::NewIPrim(const signed short & p) const -> IPrim *
     { return new Prim<signed short>(p); }
-  IPrim * PrimFactory::NewIPrim(const signed int & p) const
+  auto PrimFactory::NewIPrim(const signed int & p) const -> IPrim *
     { return new Prim<signed int>(p); }
-  IPrim * PrimFactory::NewIPrim(const signed long & p) const
+  auto PrimFactory::NewIPrim(const signed long & p) const -> IPrim *
     { return new Prim<signed long>(p); }
-  IPrim * PrimFactory::NewIPrim(const unsigned char & p) const
+  auto PrimFactory::NewIPrim(const unsigned char & p) const -> IPrim *
     { return new Prim<unsigned char>(p); }
-  IPrim * PrimFactory::NewIPrim(const unsigned short & p) const
+  auto PrimFactory::NewIPrim(const unsigned short & p) const -> IPrim *
     { return new Prim<unsigned short>(p); }
-  IPrim * PrimFactory::NewIPrim(const unsigned int & p) const
+  auto PrimFactory::NewIPrim(const unsigned int & p) const -> IPrim *
     { return new Prim<unsigned int>(p); }
-  IPrim * PrimFactory::NewIPrim(const unsigned long & p) const
+  auto PrimFactory::NewIPrim(const unsigned long & p) const -> IPrim *
     { return new Prim<unsigned long>(p); }
-  IPrim * PrimFactory::NewIPrim(const float & p) const
+  auto PrimFactory::NewIPrim(const float & p) const -> IPrim *
     { return new Prim<float>(p); }
-  IPrim * PrimFactory::NewIPrim(const double & p) const
+  auto PrimFactory::NewIPrim(const double & p) const -> IPrim *
     { return new Prim<double>(p); }
-  IPrim * PrimFactory::NewIPrim(const long double & p) const
+  auto PrimFactory::NewIPrim(const long double & p) const -> IPrim *
     { return new Prim<long double>(p); }
-  IPrim * PrimFactory::NewIPrim(const std::string & p) const
+  auto PrimFactory::NewIPrim(const std::string & p) const -> IPrim *
     { return new Prim<std::string>(p); }
   //////////////////////////////////////////////////////////////////////////////
 
@@ -1283,17 +1283,17 @@ namespace hoops {
   }
 #endif
 
-  static const char * float_format() {
+  static auto float_format() -> const char * {
     static char r[16];
     sprintf(r, "%%1.%dg", Lim<float>::digits10);
     return r;
   }
-  static const char * double_format() {
+  static auto double_format() -> const char * {
     static char r[16];
     sprintf(r, "%%1.%dg", Lim<double>::digits10);
     return r;
   }
-  static const char * long_double_format() {
+  static auto long_double_format() -> const char * {
     static char r[16];
     sprintf(r, "%%1.%dLg", Lim<long double>::digits10);
     return r;
@@ -1304,7 +1304,7 @@ namespace hoops {
   //////////////////////////////////////////////////////////////////////////////
   // Function definitions.
   //////////////////////////////////////////////////////////////////////////////
-  std::ostream & operator <<(std::ostream & os, const IPrim & p) {
+  auto operator <<(std::ostream & os, const IPrim & p) -> std::ostream & {
     os << p.StringData();
     return os;
   }

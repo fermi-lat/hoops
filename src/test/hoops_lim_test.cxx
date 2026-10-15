@@ -10,7 +10,7 @@
 //#define REALLY_HAVE_LIMITS
 #endif
 #include "hoops/hoops_numeric_limits.h"
-int main() {
+auto main() -> int {
   int status = 0;
 #ifdef REALLY_HAVE_LIMITS
   if (std::numeric_limits<bool>::is_specialized != hoops::numeric_limits<bool>::is_specialized) {

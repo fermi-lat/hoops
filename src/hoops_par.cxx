@@ -237,7 +237,7 @@ namespace hoops {
   //////////////////////////////////////////////////////////////////////////////
   // Member access.
   //////////////////////////////////////////////////////////////////////////////
-  const std::string & Par::Value() const {
+  auto Par::Value() const -> const std::string & {
     try { To(mValString); }
     catch (const Hexception &) {}
     return mValString;
@@ -277,7 +277,7 @@ static int strcasecmp(const char *s1, const char *s2) {
   //////////////////////////////////////////////////////////////////////////////
   // Function definitions.
   //////////////////////////////////////////////////////////////////////////////
-  std::ostream & operator <<(std::ostream & os, const IPar & p) {
+  auto operator <<(std::ostream & os, const IPar & p) -> std::ostream & {
     if (!p.Name().empty()) {
       os << p.Name() << "," << p.Type() << "," << p.Mode() << ",";
       if (!p.Type().compare("f") || !p.Type().compare("s")) {
