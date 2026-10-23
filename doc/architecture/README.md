@@ -186,6 +186,13 @@ surprisingly, installed to `bin/`.
 None. hoops is not SWIG-wrapped. Python front ends (`sane`'s `gt_apps`)
 drive the executables and par files instead.
 
+### Environment variables
+
+None. hoops calls no `getenv`; `PFILES`, `HEADASNOQUERY` and `APEDEBUG`
+are read by ape (see the ape doc). Variables set by conda activation are
+described under "Runtime environment" in ScienceTools'
+`docs/architecture/README.md`.
+
 ### File formats
 
 None directly. Par files are read and written by ape.
@@ -211,7 +218,12 @@ None directly. Par files are read and written by ape.
   `src/test/hoops_lim_test.cxx` with `HAVE_LIMITS` defined. It only checks
   that `hoops::numeric_limits<T>` agrees with `std::numeric_limits<T>` for
   every type, and exits 1 on any mismatch. It needs no environment, par
-  files or data. It is **not registered with CTest**; run it by hand.
+  files or data. It is **not registered with CTest**, and the project
+  harness `recipe/tests/ST-unit-test` (see "Testing" in ScienceTools'
+  `docs/architecture/README.md`) never lists it, so nothing runs it
+  automatically; run it by hand. No hoops reference data is installed or
+  compared anywhere (the `src/test/outref/` file below belongs to an
+  unbuilt test).
 - **Unbuilt tests:**
   - `src/test/hoops_prim_test.cxx` (35,724 lines): a machine-generated
     exhaustive test of the conversion matrix. It appears to be generator
